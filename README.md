@@ -6,7 +6,7 @@ End-to-end User Management tests for the OrangeHRM demo using **Playwright (Type
 - **Demo creds**: Username `Admin`, Password `admin123` (visible on login page)
 - **Playwright version used**: 1.48.0
 
-## ✅ Covered Scenarios
+## Covered Scenarios
 Each scenario is a separate `test()` block:
 1. Login & Navigate to **Admin** module
 2. **Add** a new user
@@ -15,7 +15,7 @@ Each scenario is a separate `test()` block:
 5. **Validate** the updated details
 6. **Delete** the user
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 AccuKnox-user-management-tests/
@@ -47,7 +47,7 @@ npx playwright --version
 
 > If you do not have Node.js, install LTS (v18+).
 
-## ▶️ Run tests
+## Run tests
 
 ```bash
 # Headless (CI-default)
@@ -60,17 +60,17 @@ npx playwright test --ui
 npx playwright test tests/user-management.spec.ts
 ```
 
-## 🌱 Test Data
+##  Test Data
 - The spec generates a unique username per run (timestamp-based).
 - It uses an existing employee like **"Paul Collings"** on the demo instance.
 - Role toggles between **ESS** and **Admin** during edit step to validate changes.
 
-## 📄 Notes
+##  Notes
 - Selectors prefer `getByRole`, `getByLabel`, `getByPlaceholder`, or visible text.
 - Proper waits are added via Playwright’s auto-waiting & explicit expectations.
 - The suite is written to be idempotent: it cleans up by deleting the created user.
 
-## 🔒 Environment
+##  Environment
 No secrets are required—demo creds are on the login page.
 
 ---
